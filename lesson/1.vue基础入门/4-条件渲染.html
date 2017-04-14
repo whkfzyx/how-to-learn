@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4-条件渲染</title>
+    <link rel="stylesheet" href="./lesson.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="seen===1">现在你看到我了</p>
+        <p v-else-if="seen===0">你可以假装看不见我</p>
+        <p v-else>现在你真的看不见我了</p>
+        <button v-on:click="seen=1">显示文本</button>
+        <button v-on:click="seen=0">隐藏文本</button>
+        <button v-on:click="seen=''">真的隐藏文本</button>
+        <hr>
+        <p class="sky">>不带key的条件切换：</p>
+        <div v-if="loginType1 === 'username'">
+            <label>Username</label>
+            <input placeholder="Enter your username">
+        </div>
+        <div v-else>
+            <label>Email</label>
+            <input placeholder="Enter your email address">
+        </div>
+        <button v-on:click="loginType1 = loginType1 === 'username' ? '' : 'username'">切换输入框</button>
+        <hr>
+        <p class="sky">>带key的条件切换：</p>
+        <div v-if="loginType2 === 'username'">
+            <label>Username</label>
+            <input placeholder="Enter your username" key="username-input">
+        </div>
+        <div v-else>
+            <label>Email</label>
+            <input placeholder="Enter your email address" key="email-input">
+        </div>
+        <button v-on:click="loginType2 = loginType2 === 'username' ? '' : 'username'">切换输入框</button>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                seen: 1,
+                loginType1: 'username',
+                loginType2: ''
+            }
+        })
+    </script>
+</body>
+
+</html>

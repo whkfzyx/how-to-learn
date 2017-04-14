@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6-事件处理器</title>
+    <link rel="stylesheet" href="./lesson.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <p class="sky">>方法处理器</p>
+        <button v-on:click="eventObj">event对象</button>
+        <p class="sky">>内联处理器</p>
+        <button v-on:click="say('hi')">Say hi</button>
+        <p class="sky">>事件修饰符</p>
+        <div v-on:click="say('father')" :style="{border:'1px solid #000'}">
+            父元素
+            <button @click="say('child',$event)">子元素</button>
+            <button @click.stop="say('stop-child')">阻止了冒泡的子元素</button>
+        </div>
+        <p class="sky">>按键修饰符</p>
+        <input v-on:keyup.enter="say('刚按了一下回车')">
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            methods: {
+                eventObj: function (event) {
+                    this.message = '<' + event.target.tagName + '>' + this.message
+                },
+                say: function (message, event) {
+                    if (event) message = message + event.target.tagName;
+                    alert(message);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

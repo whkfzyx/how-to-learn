@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    margin: 5px;
+    word-wrap: break-word;
+    vertical-align: middle;
+}
+
+button {
+    padding: 3px 10px;
+    margin: 10px 5px;
+    background-color: #fff;
+    border: 1px solid #666;
+    border-radius: 3px;
+}
+
+button:disabled {
+    background-color: #999;
+    color: #eee;
+    border-color: #999;
+}
+
+input[type="text"] {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    width: 150px;
+    margin: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#todo {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.todo-input {
+    text-align: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #666;
+}

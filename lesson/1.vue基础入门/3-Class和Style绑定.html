@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3-Class和Style绑定</title>
+    <link rel="stylesheet" href="./lesson.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-bind:class="{ active: isActive, 'danger': hasError }">给class绑定了对象的 {{ message }}</p>
+        <p :class="classObj">给class绑定了对象属性的 {{ message }}</p>
+        <p :class="classComp">给class绑定了计算属性的 {{ message }}</p>
+        <p :class="[activeClass, hasError ? errorClass : '']">给class绑定了数组的 {{ message }}</p>
+        <hr>
+        <p v-bind:style="{ color: activeColor }">绑定了style的 {{ message }}</p>
+        <p :style="styleObj">给style绑定了对象属性的 {{ message }}</p>
+        <p :style="styleComp">给style绑定了计算属性的 {{ message }}</p>
+        <p :style="[styleObj,anotherStyleObj]">给style绑定了数组的 {{ message }}</p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                // 设定class的属性
+                message: 'hello world!',
+                isActive: true,
+                hasError: false,
+                classObj: {
+                    active: false,
+                    danger: true
+                },
+                activeClass: 'active',
+                errorClass: 'danger',
+                // 设定style的属性
+                activeColor: 'blue',
+                styleObj: {
+                    color: 'purple',
+                    fontSize: '26px'
+                },
+                anotherStyleObj: {
+                    backgroundColor: 'pink',
+                    padding: '5px'
+                }
+            },
+            computed: {
+                classComp: function () {
+                    return {
+                        active: this.isActive && !this.hasError,
+                        'danger': this.hasError && !this.isActive
+                    }
+                },
+                styleComp: function () {
+                    return {
+                        color: this.isActive ? 'orange' : 'black'
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

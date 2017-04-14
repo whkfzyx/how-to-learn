@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-计算属性</title>
+    <link rel="stylesheet" href="./lesson.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>这是一个普通的 {{ message }}</p>
+        <p>这是一个计算后的 {{ capitalize }}</p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello world!'
+            },
+            computed: {
+                capitalize: {
+                    get: function () {
+                        // 'this' 指向 app 实例
+                        return this.message.toUpperCase();
+                    },
+                    set: function (newValue) {
+                        this.message = newValue;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
