@@ -32,6 +32,13 @@
 
 * **[es6]** - ECMAScript 6.0（简称 es6）是 javascript 语言的下一代标准，已经在2015年6月正式发布了。
 
+## 内部课程
+
+### 入门
+
+* **[vue基础入门]** - 介绍vue基础语法，通过课后作业，您将完成整个基础知识练习。
+
+
 ## 能力评测
 
 >能力评测为一个小工具帮你评估开发一个APP前需要掌握的技能，通过学习对于的级别资料。相信很快就能上手拉~
@@ -64,6 +71,11 @@
 暂无
 
 ## 如何参与贡献？
+
+### 我有问题
+
+你可以在**[issues]**登记问题，我们会第一时间处理。
+
 
 ### 我有心得
 我们认为分享是一种更好的检测学习方式。
@@ -111,5 +123,8 @@
 [es6]: http://es6.ruanyifeng.com/
 
 
+[vue基础入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/1.vue基础入门
+
 [项目贡献]:https://github.com/whkfzyx/how-to-learn/graphs/contributors
 
+[issues]:https://github.com/whkfzyx/how-to-learn/issues

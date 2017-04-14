@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1-数据绑定</title>
+    <link rel="stylesheet" href="./lesson.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>普通的 {{ message }}</p>
+        <p>表达式计算出的 {{ message + 'everyone!' }}</p>
+        <p>过滤后的 {{ message | capitalize }}</p>
+        <p v-bind:class="colorfont">绑定了class的 {{ message }}</p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello world!',
+                colorfont: 'sky'
+            },
+            filters: {
+                capitalize: function (value) {
+                    if (!value) return '';
+                    value = value.toString();
+                    return value.toUpperCase();
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

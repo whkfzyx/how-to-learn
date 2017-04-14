@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7-表单控件绑定</title>
+    <link rel="stylesheet" href="./lesson.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--单行文本-->
+        <p class="sky">>你输入的是：{{ message }}</p>
+        <input v-model="message">
+        <hr>
+        <!--多行文本-->
+        <p class="sky">>你输入的多行文本:</p>
+        <p style="white-space: pre">{{ texts }}</p>
+        <textarea v-model.lazy.trim="texts" placeholder="多行文本也没问题"></textarea>
+        <hr>
+        <!--复选框checkbox-->
+        <p class="sky">>单个复选框，逻辑值：</p>
+        <input type="checkbox" id="checkbox1" v-model="checked">
+        <label for="checkbox1">{{ checked }}</label>
+        <hr>
+        <p class="sky">>单个复选框，绑定值：</p>
+        <input type="checkbox" id="checkbox2" v-model="checkValue" v-bind:true-value="checka" v-bind:false-value="checkb">
+        <label for="checkbox2">{{ checkValue }}</label>
+        <hr>
+        <p class="sky">>多个复选框，绑定到同一个数组：</p>
+        <input type="checkbox" id="libai" value="李白" v-model="checkedNames">
+        <label for="libai">李白</label>
+        <input type="checkbox" id="lanlingwang" value="兰陵王" v-model="checkedNames">
+        <label for="lanlingwang">兰陵王</label>
+        <input type="checkbox" id="mike" value="马可波罗" v-model="checkedNames">
+        <label for="mike">马可波罗</label>
+        <p>选中的英雄: {{ checkedNames }}</p>
+        <hr>
+        <!--单选框radio-->
+        <p class="sky">>单选按钮：</p>
+        <input type="radio" id="one" value="貂蝉" v-model="picked">
+        <label for="one">貂蝉</label>
+        <br>
+        <input type="radio" id="two" v-bind:value="radio1" v-model="picked">
+        <label for="two">吕布</label>
+        <br>
+        <span>你选择了{{ picked }}</span>
+        <hr>
+        <!--选择列表select-->
+        <p class="sky">>选择列表：</p>
+        <select v-model="selected">
+            <option>刺客</option>
+            <option>战士</option>
+            <option>法师</option>
+            <option>辅助</option>
+        </select>
+        <span>选择的职业: {{ selected }}</span>
+        <hr>
+        <p class="sky">>多选列表：</p>
+        <select v-model="selList" multiple style="width: 150px">
+            <option>破军</option>
+            <option>泣血</option>
+            <option>复活甲</option>
+        </select>
+        <br>
+        <span>选择的装备: {{ selList }}</span>
+        <hr>
+        <p class="sky">>动态选项：</p>
+        <select v-model="selText">
+            <option v-for="option in options" v-bind:value="option.value">
+                {{ option.text }}
+            </option>
+        </select>
+        <span>你选择了: {{ selText }}</span>
+        <hr>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                texts: '',
+                checked: false,
+                checkValue: null,
+                checka: '选中了',
+                checkb: '没选中',
+                checkedNames: [],
+                picked: '吕布',
+                radio1: '吕布',
+                selected: null,
+                selList: [],
+                selText: '大乔',
+                options: [{
+                        text: '刺客',
+                        value: '荆轲'
+                    },
+                    {
+                        text: '辅助',
+                        value: '大乔'
+                    },
+                    {
+                        text: '战士',
+                        value: '哪吒'
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

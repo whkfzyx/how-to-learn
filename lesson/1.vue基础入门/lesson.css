@@ -1,0 +1,15 @@
+body {
+    font-family: "Microsoft Yahei", "consolas", Arial, sans-serif, "San Francisco";
+}
+
+.sky {
+    color: blue;
+}
+
+.active {
+    color: green;
+}
+
+.danger {
+    color: #EF3731;
+}
