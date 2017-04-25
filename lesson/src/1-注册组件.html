@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1-注册组件</title>
+  <!--<link rel="stylesheet" href="./lesson.css">-->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="lesson1">
+    <h3>vue实例1：全局注册</h3>
+    <table-title></table-title>
+    <table border="1">
+      <th is="table-item"></th>
+      <th is="table-item"></th>
+      <th is="table-item"></th>
+    </table>
+  </div>
+  <div id="lesson2">
+    <h3>vue实例2：局部注册</h3>
+    <table-title></table-title>
+    <table-child></table-child>
+  </div>
+  <div id="lesson3">
+    <h3>vue实例3：组件内部的局部注册</h3>
+    <table-father></table-father>
+  </div>
+  <script src="./1-vue.js"></script>
+</body>
+
+</html>

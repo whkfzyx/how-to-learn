@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2-1-数据传递-props</title>
+  <!--<link rel="stylesheet" href="./lesson.css">-->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <div id="lesson1">
+    <h3>vue实例1：字面量语法</h3>
+    <table border="1">
+      <tr>
+        <th is="table-item" text="姓名" another-text="出生年"></th>
+      </tr>
+      <tr v-for="person in people">
+        <th is="table-item" v-bind:text="person.name" v-bind:another-text="person.birth"></th>
+      </tr>
+    </table>
+  </div>
+
+  <div id="lesson2">
+    <h3>vue实例2：动态语法</h3>
+    <input v-model="parentMsg">
+    <child v-bind:my-message="parentMsg"></child>
+  </div>
+
+  <div id="lesson3">
+    <h3>vue实例3：prop验证</h3>
+    <table border="1">
+      <tr>
+        <th is="table-type" sn="1" text="hello" another-text="world!"></th>
+        <th is="table-type" :sn="2" text="hello"></th>
+        <th is="table-type" :sn="3" another-text="world!"></th>
+      </tr>
+    </table>
+  </div>
+  <script src="./2-1-vue.js"></script>
+</body>
+
+</html>

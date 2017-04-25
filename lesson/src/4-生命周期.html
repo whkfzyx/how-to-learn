@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4-生命周期</title>
+  <!--<link rel="stylesheet" href="./lesson.css">-->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <p>{{ message }}</p>
+    <p @click="foo">{{ message | filter }}</p>
+    <p>{{ compute }}</p>
+    <comp-demo></comp-demo>
+  </div>
+
+  <script type="text/javascript">
+    Vue.component('comp-demo', {
+      template: '<p>{{demoComp}}</p>',
+      data: function() {
+        return ({
+          demoComp: '我是一个全局注册的组件!'
+        })
+      },
+      beforeCreate: function() {
+        console.log("%c%s", "color:blue", '========组件创建前状态========');
+      },
+      created: function() {
+        console.log("%c%s", "color:blue", '========组件创建完成状态========');
+      },
+      beforeMount: function() {
+        console.log("%c%s", "color:blue", '========组件挂载前状态========');
+      },
+      mounted: function() {
+        console.log("%c%s", "color:blue", '========组件挂载完成状态========');
+      },
+    })
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: "文本属性"
+      },
+      computed: {
+        compute: function() {
+          return ('计算属性');
+        }
+      },
+      filters: {
+        filter: function(value) {
+          console.log('已生成过滤器');
+          return (value + '过滤器');
+        }
+      },
+      methods: {
+        foo: function() {
+          return ('方法内容');
+        }
+      },
+      beforeCreate: function() {
+        console.group('beforeCreate 创建前状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "message: " + this.message);
+        console.log("%c%s", "color:red", "computed: " + this.compute);
+        console.log("%c%s", "color:red", "method: " + this.foo());
+      },
+      created: function() {
+        console.group('created 创建完毕状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "message : " + this.message);
+        console.log("%c%s", "color:red", "computed: " + this.compute);
+        console.log("%c%s", "color:red", "method: " + this.foo());
+      },
+      beforeMount: function() {
+        console.group('beforeMount 挂载前状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "app内容: ");
+        console.log(app);
+        console.log("%c%s", "color:red", "message : " + this.message);
+        console.log("%c%s", "color:red", "computed: " + this.compute);
+        console.log("%c%s", "color:red", "method: " + this.foo());
+      },
+      mounted: function() {
+        console.group('mounted 挂载结束状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "app内容: ");
+        console.log(app);
+        console.log("%c%s", "color:red", "message: " + this.message);
+        console.log("%c%s", "color:red", "computed: " + this.compute);
+        console.log("%c%s", "color:red", "method: " + this.foo());
+      },
+      beforeUpdate: function() {
+        console.group('beforeUpdate 更新前状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "app内容: ");
+        console.log(app);
+        console.log("%c%s", "color:red", "message: " + this.message);
+      },
+      updated: function() {
+        console.group('updated 更新完成状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "app内容: ");
+        console.log(app);
+        console.log("%c%s", "color:red", "message: " + this.message);
+      },
+      beforeDestroy: function() {
+        console.group('beforeDestroy 销毁前状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "app内容: ");
+        console.log(app);
+        console.log("%c%s", "color:red", "message: " + this.message);
+      },
+      destroyed: function() {
+        console.group('destroyed 销毁完成状态===============》');
+        console.log("%c%s", "color:red", "el:");
+        console.log(this.$el);
+        console.log("%c%s", "color:red", "data:");
+        console.log(this.$data);
+        console.log("%c%s", "color:red", "app内容: ");
+        console.log(app);
+        console.log("%c%s", "color:red", "message: " + this.message);
+      }
+    })
+  </script>
+</body>
+
+</html>

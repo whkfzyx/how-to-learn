@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3-动态组件</title>
+  <!--<link rel="stylesheet" href="./lesson.css">-->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <div id="lesson1">
+    <lesson-content>
+      <h3 slot="header">vue实例</h3>
+      <input v-model="newName" placeholder="新的姓名">
+      <input v-model="newBirth" placeholder="新的出生年">
+
+      <table-add v-bind:add-name="newName" v-bind:add-birth="newBirth" v-on:table-add="peopleAdd"></table-add>
+      <!--缓存组件-->
+      <keep-alive include="child-list">
+        <component :is="viewComp" text="姓名" another-text="出生年"></component>
+      </keep-alive>
+
+      <!--动态组件不能放在table,select这类元素中-->
+      <component :is="viewComp" v-for="(person, index) in people" :text="person.name" :another-text="person.birth" :key="index"></component>
+
+      <table-del v-on:table-delete="peopleDel">
+        <span>{{lastName}}</span>
+      </table-del>
+
+      <button @click="changeComp">改变组件</button>
+    </lesson-content>
+  </div>
+
+  <script src="./3-vue.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2-3-数据传递-slot分发</title>
+  <!--<link rel="stylesheet" href="./lesson.css">-->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <div id="lesson1">
+    <lesson-content>
+      <!--具名的slot插槽-->
+      <h3 slot="header">vue实例：slot分发</h3>
+      <input v-model="newName" placeholder="新的姓名">
+      <input v-model="newBirth" placeholder="新的出生年">
+      <table-add v-bind:add-name="newName" v-bind:add-birth="newBirth" v-on:table-add="peopleAdd"></table-add>
+      <table border="1">
+        <thead>
+          <tr is="table-item" text="姓名" another-text="出生年"></tr>
+        </thead>
+        <!--自动添加到tbody中-->
+        <tr v-for="person in people" is="table-item" v-bind:text="person.name" v-bind:another-text="person.birth"></tr>
+      </table>
+      <table-del v-on:table-delete="peopleDel">
+        <!--匿名slot插槽-->
+        <span>{{lastName}}</span>
+      </table-del>
+      <!--<table-del v-on:click.native="peopleDel"></table-del>-->
+
+    </lesson-content>
+  </div>
+
+  <script src="./2-3-vue.js"></script>
+</body>
+
+</html>
