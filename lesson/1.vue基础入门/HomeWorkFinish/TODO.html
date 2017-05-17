@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TODO</title>
+  <link rel="stylesheet" href="./TODO.css">
+</head>
+
+<body>
+  <div id="todo">
+    <h2>剩余待办：{{todoTotal}}条</h2>
+    <div class="todo-input">
+      <input type="text" v-model.trim="todoNew">
+      <button @click="todoAdd">添加</button>
+    </div>
+    <ul>
+      <li v-for="(todo,index) in todoList">
+        <input type="checkbox" :id="'todo'+index" :key="index" v-model="todo.completed">
+        <input type="text" v-if="todo.editable" v-model="todo.text">
+        <label v-else :for="'todo'+index" :class="{completed:todo.completed}">{{ todo.text }}</label>
+        <button @click="editTodo(index)">{{ todo.editable | editShow}}</button>
+        <button @click="todoRemove(index)" :disabled="todo.editable">删除</button>
+      </li>
+    </ul>
+
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="./TODO.js"></script>
+</body>
+
+</html>

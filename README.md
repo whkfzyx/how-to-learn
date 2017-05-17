@@ -28,15 +28,23 @@
 
 * **[调试]** - chrome开发工具就是一个工具，它允许Web开发人员可以通过浏览器应用程序干预和操作Web页面，也可以通过这个工具调试和测试Web页面或Web应用程序。
 
+* **[VUX]** - 基于vue框架和微信WeUI样式库的一套第三方vue组件库，可以满足大多数基本的应用场景。
+
 #### 高级
 
-* **[es6]** - ECMAScript 6.0（简称 es6）是 javascript 语言的下一代标准，已经在2015年6月正式发布了。
+* **[ES6]** - ECMAScript 6.0（简称 es6）是 javascript 语言的下一代标准，已经在2015年6月正式发布了。
 
 ## 内部课程
 
 ### 入门
 
 * **[vue基础入门]** - 介绍vue基础语法，通过课后作业，您将完成整个基础知识练习。
+
+* **[vue组件入门]** - 介绍vue组件的基本创建方式以及组件间的数据传递方式，通过课后作业，可以对组件的应用有一个最基本的掌握和认识。
+
+### 基础应用
+
+* **[vue组件应用实践（上）]** - 介绍实际项目应用中的项目构建方式，以及在模块化开发中的vue单文件组件格式，并通过对**[典型UI]**页面的代码剖析来讲解**[VUX]**组件库的应用方式，通过本次课后作业，您可以基本掌握实际项目的一个完整流程，并了解单文件组件的用法。
 
 
 ## 能力评测
@@ -116,14 +124,19 @@
 [axios]: https://github.com/mzabriskie/axios
 [vuex]: https://vuex.vuejs.org/zh-cn/getting-started.html
 [调试]: http://www.w3cplus.com/tools/how-to-use-chrome-devtools-like-a-pro.html
+[VUX]: https://vux.li/#/zh-CN/README
 
 
 [flex]: http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
-[es6]: http://es6.ruanyifeng.com/
+[ES6]: http://es6.ruanyifeng.com/
 
 
 [vue基础入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/1.vue基础入门
+[vue组件入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/2.vue组件入门
+[vue组件应用实践（上）]: ./lesson/3.vue组件应用实践（上）
+[典型UI]: https://github.com/whkfzyx/vue2.x-mysoft-standardui
+
 
 [项目贡献]:https://github.com/whkfzyx/how-to-learn/graphs/contributors
 
