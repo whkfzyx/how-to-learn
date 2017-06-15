@@ -44,7 +44,7 @@
 
 ### 基础应用
 
-* **[vue组件应用实践（上）]** - 介绍实际项目应用中的项目构建方式，以及在模块化开发中的vue单文件组件格式，并通过对 **[典型UI]** 页面的代码剖析来讲解 **[VUX]** 组件库的应用方式，通过本次课后作业，您可以基本掌握实际项目的一个完整流程，并了解单文件组件的用法。
+* **[vue组件应用实践（上）]**  **[vue组件应用实践（下）]** - 介绍实际项目应用中的项目构建方式，以及在模块化开发中的vue单文件组件格式，并通过对 **[典型UI]** 页面的代码剖析来讲解 **[VUX]** 组件库的应用方式，通过本次课后作业，您可以基本掌握实际项目的一个完整流程，并了解单文件组件的用法。
 
 
 ## 能力评测
@@ -131,7 +131,8 @@
 
 [vue基础入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/1.vue基础入门
 [vue组件入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/2.vue组件入门
-[vue组件应用实践（上）]: ./lesson/3.vue组件应用实践（上）
+[vue组件应用实践（上）]: ./lesson/3.vue组件应用之基础篇
+[vue组件应用实践（下）]: ./lesson/4.vue组件应用之实操篇
 [典型UI]: https://github.com/whkfzyx/vue2.x-mysoft-standardui
 
 
