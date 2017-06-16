@@ -28,11 +28,11 @@
 
 * **[调试]** - chrome开发工具就是一个工具，它允许Web开发人员可以通过浏览器应用程序干预和操作Web页面，也可以通过这个工具调试和测试Web页面或Web应用程序。
 
-* **[VUX]** - 基于vue框架和微信WeUI样式库的一套第三方vue组件库，可以满足大多数基本的应用场景。
+* **[vux]** - 基于vue框架和微信WeUI样式库的一套第三方vue组件库，可以满足大多数基本的应用场景。
 
 #### 高级
 
-* **[ES6]** - ECMAScript 6.0（简称 es6）是 javascript 语言的下一代标准，已经在2015年6月正式发布了。
+* **[es6]** - ECMAScript 6.0（简称 es6）是 javascript 语言的下一代标准，已经在2015年6月正式发布了。
 
 ## 内部课程
 
@@ -51,18 +51,28 @@
 
 >能力评测为一个小工具帮你评估开发一个APP前需要掌握的技能，通过学习对于的级别资料。相信很快就能上手拉~
 
-### 能开发简单的APP
-* 掌握html(5)、javascript基础语法。
+### 开发简单的APP
+* 掌握html(5)、javascript基础语法：
+    * 掌握 html 标签用法，并能区分块框与行内框
+    * 掌握 javascript 基础语法
 * 掌握css：
     * 基础语法
     * 选择器
     * css定位
     * [盒子模型]
-* 掌握基本开发流程：nodejs、npm环境搭建&运行、[明源项目脚手架]使用
+* 掌握基本开发流程：
+    * nodejs、npm环境搭建&运行
+    * [明源项目脚手架] 使用
 * 掌握 [vue框架] 所有知识点
 * [实践]可完成简单html页面开发
 
-### 能开发常见APP
+### 开发常见APP
+* 掌握并能说明[es6]特性：
+    * 变量声明let,const
+    * 箭头函数
+    * promise对象
+    * import、export
+    * 解构赋值
 * 进行前后台请求并熟悉跨域相关配置
 * 能熟悉调用本地API
 * 可以进行简单调试、错误定位
@@ -70,7 +80,7 @@
 * [实践]进行复杂页面布局(掌握[flex]布局)
 
 ### 开发出性能、交互较高的APP
-* 掌握并能说明es6特性
+
 * 在社群基础上进行组件扩展
 * 评估、引入第三方开源类库
 * 案例解析与典型功能沉淀
@@ -126,12 +136,12 @@
 [axios]: https://github.com/mzabriskie/axios
 [vuex]: https://vuex.vuejs.org/zh-cn/getting-started.html
 [调试]: http://www.w3cplus.com/tools/how-to-use-chrome-devtools-like-a-pro.html
-[VUX]: https://vux.li/#/zh-CN/README
+[vux]: https://vux.li/#/zh-CN/README
 
 
 [flex]: http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
-[ES6]: http://es6.ruanyifeng.com/
+[es6]: http://es6.ruanyifeng.com/
 
 
 [vue基础入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/1.vue基础入门
