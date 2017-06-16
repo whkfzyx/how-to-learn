@@ -52,21 +52,25 @@
 >能力评测为一个小工具帮你评估开发一个APP前需要掌握的技能，通过学习对于的级别资料。相信很快就能上手拉~
 
 ### 能开发简单的APP
-* html(5)、css(3)、javascript基本技能
-* 掌握html5移动开发流程
-* 可以开发简单html页面
-* 掌握[盒子模型]
+* 掌握html(5)、javascript基础语法。
+* 掌握css：
+    * 基础语法
+    * 选择器
+    * css定位
+    * [盒子模型]
+* 掌握基本开发流程：nodejs、npm环境搭建&运行、[明源项目脚手架]使用
+* 掌握 [vue框架] 所有知识点
+* [实践]可完成简单html页面开发
 
 ### 能开发常见APP
-* 进行前后台请求
+* 进行前后台请求并熟悉跨域相关配置
 * 能熟悉调用本地API
-* 进行复杂页面布局([flex]布局)
 * 可以进行简单调试、错误定位
-* 完成简单组件开发
-
+* 独立完成一般组件开发
+* [实践]进行复杂页面布局(掌握[flex]布局)
 
 ### 开发出性能、交互较高的APP
-* 熟悉es6特性
+* 掌握并能说明es6特性
 * 在社群基础上进行组件扩展
 * 评估、引入第三方开源类库
 * 案例解析与典型功能沉淀
@@ -140,3 +144,5 @@
 [项目贡献]:https://github.com/whkfzyx/how-to-learn/graphs/contributors
 
 [issues]:https://github.com/whkfzyx/how-to-learn/issues
+
+[明源项目脚手架]:https://github.com/whkfzyx/cli
