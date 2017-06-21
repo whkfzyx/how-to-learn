@@ -28,11 +28,11 @@
 
 * **[调试]** - chrome开发工具就是一个工具，它允许Web开发人员可以通过浏览器应用程序干预和操作Web页面，也可以通过这个工具调试和测试Web页面或Web应用程序。
 
-* **[VUX]** - 基于vue框架和微信WeUI样式库的一套第三方vue组件库，可以满足大多数基本的应用场景。
+* **[vux]** - 基于vue框架和微信WeUI样式库的一套第三方vue组件库，可以满足大多数基本的应用场景。
 
 #### 高级
 
-* **[ES6]** - ECMAScript 6.0（简称 es6）是 javascript 语言的下一代标准，已经在2015年6月正式发布了。
+* **[es6]** - ECMAScript 6.0（简称 es6）是 javascript 语言的下一代标准，已经在2015年6月正式发布了。
 
 ## 内部课程
 
@@ -44,31 +44,43 @@
 
 ### 基础应用
 
-* **[vue组件应用实践（上）]** - 介绍实际项目应用中的项目构建方式，以及在模块化开发中的vue单文件组件格式，并通过对 **[典型UI]** 页面的代码剖析来讲解 **[VUX]** 组件库的应用方式，通过本次课后作业，您可以基本掌握实际项目的一个完整流程，并了解单文件组件的用法。
+* **[vue组件应用实践（上）]**  **[vue组件应用实践（下）]** - 介绍实际项目应用中的项目构建方式，以及在模块化开发中的vue单文件组件格式，并通过对 **[典型UI]** 页面的代码剖析来讲解 **[VUX]** 组件库的应用方式，通过本次课后作业，您可以基本掌握实际项目的一个完整流程，并了解单文件组件的用法。
 
 
 ## 能力评测
 
 >能力评测为一个小工具帮你评估开发一个APP前需要掌握的技能，通过学习对于的级别资料。相信很快就能上手拉~
 
-### 能开发简单的移动APP
-* 学习初级资料
-* html(5)、css(3)、javascript基本技能
-* 掌握html5移动开发流程
-* 可以开发简单html页面
-* 了解[盒子模型]
-* [flex]布局
+### 开发简单的APP
+* 掌握html(5)、javascript基础语法：
+    * 掌握 html 标签用法，并能区分块框与行内框
+    * 掌握 javascript 基础语法
+* 掌握css：
+    * 基础语法
+    * 选择器
+    * css定位
+    * [盒子模型]
+* 掌握基本开发流程：
+    * nodejs、npm环境搭建&运行
+    * [明源项目脚手架] 使用
+* 掌握 [vue框架] 所有知识点
+* [实践]可完成简单html页面开发
 
-### 能开发常见APP
-* 学习实战资料
-* 进行前后台请求
+### 开发常见APP
+* 掌握并能说明[es6]特性：
+    * 变量声明let,const
+    * 箭头函数
+    * promise对象
+    * import、export
+    * 解构赋值
+* 进行前后台请求并熟悉跨域相关配置
 * 能熟悉调用本地API
-* 进行复杂页面布局
 * 可以进行简单调试、错误定位
-* 完成简单组件开发
+* 独立完成一般组件开发
+* [实践]进行复杂页面布局(掌握[flex]布局)
 
 ### 开发出性能、交互较高的APP
-* 学习高级资料
+
 * 在社群基础上进行组件扩展
 * 评估、引入第三方开源类库
 * 案例解析与典型功能沉淀
@@ -124,20 +136,23 @@
 [axios]: https://github.com/mzabriskie/axios
 [vuex]: https://vuex.vuejs.org/zh-cn/getting-started.html
 [调试]: http://www.w3cplus.com/tools/how-to-use-chrome-devtools-like-a-pro.html
-[VUX]: https://vux.li/#/zh-CN/README
+[vux]: https://vux.li/#/zh-CN/README
 
 
 [flex]: http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
-[ES6]: http://es6.ruanyifeng.com/
+[es6]: http://es6.ruanyifeng.com/
 
 
 [vue基础入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/1.vue基础入门
 [vue组件入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/2.vue组件入门
-[vue组件应用实践（上）]: ./lesson/3.vue组件应用实践（上）
+[vue组件应用实践（上）]: ./lesson/3.vue组件应用之基础篇
+[vue组件应用实践（下）]: ./lesson/4.vue组件应用之实操篇
 [典型UI]: https://github.com/whkfzyx/vue2.x-mysoft-standardui
 
 
 [项目贡献]:https://github.com/whkfzyx/how-to-learn/graphs/contributors
 
 [issues]:https://github.com/whkfzyx/how-to-learn/issues
+
+[明源项目脚手架]:https://github.com/whkfzyx/cli
