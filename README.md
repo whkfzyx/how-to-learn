@@ -46,6 +46,8 @@
 
 * **[vue组件应用实践（上）]**  **[vue组件应用实践（下）]** - 介绍实际项目应用中的项目构建方式，以及在模块化开发中的vue单文件组件格式，并通过对 **[典型UI]** 页面的代码剖析来讲解 **[VUX]** 组件库的应用方式，通过本次课后作业，您可以基本掌握实际项目的一个完整流程，并了解单文件组件的用法。
 
+* **[vue移动交付之vue-router]**  **[vue移动交付之axios]**  **[vue移动交付之vuex]** - 简单讲解了vue全家桶的其他成员，掌握这三次课程的内容之后就能独立完成一个完整的移动端vue项目了，并且在课程学习的过程中，还能够了解基本的第三方组件使用方式，在之后的独立开发过程中也能够自行扩展项目组件。
+
 
 ## 能力评测
 
@@ -148,6 +150,9 @@
 [vue组件入门]: https://github.com/whkfzyx/how-to-learn/tree/master/lesson/2.vue组件入门
 [vue组件应用实践（上）]: ./lesson/3.vue组件应用之基础篇
 [vue组件应用实践（下）]: ./lesson/4.vue组件应用之实操篇
+[vue移动交付之vue-router]: ./lesson/5.vue移动交付之vue-router
+[vue移动交付之axios]: ./lesson/6.vue移动交付之axios
+[vue移动交付之vuex]: ./lesson/7.vue移动交付之vuex
 [典型UI]: https://github.com/whkfzyx/vue2.x-mysoft-standardui
 
 
